@@ -18,6 +18,7 @@
     color:#37373f;
     font-size: 60px;
     font-family: "Schoolbell", cursive;
+    margin-bottom: -10px;
 }
 .heroText h4{
     display: flex;
@@ -25,13 +26,15 @@
     padding-top: 20px;
     font-size: 20px;
     color: #7f7f90;
+    
 }
 .heroButton{
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: start;
-    padding-top: 50px;
+    padding-top: 10px;
+    
 }
 .heroButton button{
     display: flex;
@@ -57,6 +60,7 @@
     justify-content: center;
     gap: 10px;
     margin-left: -280px;
+    margin-top: -15px;
 
 }
 .watchVideo img{

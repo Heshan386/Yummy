@@ -1,0 +1,107 @@
+.mainfooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    background: #1f1f24;
+    margin-top: 50px;
+}
+.footerContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 300px;
+}
+.contactFooter{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    height:150px;
+    width: 95%;
+    border-bottom: 1px solid #7f7f90;
+}
+.address{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.locationIconFooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+}
+.addressContent{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center; 
+}
+.addressContent h4{
+    color: white;
+}
+.addressContent span{
+    color:#7f7f90 ;
+}
+.phone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+}
+.phone h5{
+    color: white;
+}
+.email h5{
+    color: white;
+}
+.email{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -40px;
+}
+.followUS{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.followUS h4{
+    color: white;
+}
+.followUS .socialIcon{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    
+}
+.socialIcon img{
+    display: flex;
+    width: 32px;
+    height: 32px;
+}
+.copyRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5px;
+    color: white;
+    margin-bottom: -25px;
+    
+}
+.desingBy{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 5px;
+}
+.desingBy span{
+    color: #ce1212;
+} 

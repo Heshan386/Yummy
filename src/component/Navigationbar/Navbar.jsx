@@ -9,7 +9,7 @@ const [nav,setNav]= useState("");
     <div className='mainNav'>
         <h1>Yummy.</h1>
             <ul>
-                <li onClick={()=>setNav("home")} className={nav==="home"?"active":""}>Home</li>
+                <a href="#home"><li onClick={()=>setNav("home")} className={nav==="home"?"active":""}>Home</li></a>
                 <li onClick={()=>setNav("about")} className={nav==="about"?"active":""}>About</li>
                 <li onClick={()=>setNav("menu")} className={nav==="menu"?"active":""}>Menu</li>
                 <li onClick={()=>setNav("event")} className={nav==="event"?"active":""}>Event</li>
