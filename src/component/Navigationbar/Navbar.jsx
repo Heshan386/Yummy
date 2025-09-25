@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Navbar.css'
+
 const Navbar = () => {
 
 const [nav,setNav]= useState("");
@@ -16,7 +17,7 @@ const [nav,setNav]= useState("");
                 <li onClick={()=>setNav("gallery")} className={nav==="gallery"?"active":""}>Gallery</li>
                 <li onClick={()=>setNav("contact")} className={nav==="contact"?"active":""}>Contact</li>
             </ul>
-        <button>Book a Table</button>
+        <a href="#booknow"><button>Book a Table</button></a>
     </div>
   )
 }

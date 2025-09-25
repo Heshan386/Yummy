@@ -10,7 +10,7 @@ const HeroSection = () => {
             <h1>Delicious Food</h1>
             <h4>We are team of talented designers making websites with <br /> Bootstrap</h4>
             <div className="heroButton">
-                <button>Book a Table</button>
+                <a href="#booknow"><button>Book a Table</button></a>
                 <div className="watchVideo">
                     <img src={palyicon} alt="" />
                     <h5>Watch Video</h5>
