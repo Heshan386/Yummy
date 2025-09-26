@@ -47,7 +47,7 @@ const Footer = () => {
                         <h4>Opening Hours</h4>
                             <div className="phone">
                                 <h5>Mon-Sat:</h5>
-                                <span> A108 Adam Street</span>
+                                <span>9.00AM-10.00PM</span>
                             </div>
                             <div className="email">
                                 <h5>Sunday:</h5>

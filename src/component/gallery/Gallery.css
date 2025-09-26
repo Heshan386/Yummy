@@ -1,0 +1,56 @@
+.mainGallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 550px;
+    background: rgb(236, 233, 229);
+    margin-top: 50px;
+}
+.mainGallery span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -20px;
+}
+.galleryHeding{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "Schoolbell", cursive;
+    font-size: 25px;
+    gap: 20px;
+}
+.redGallery{
+    color: #ce1212;
+}
+.galleryImage{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: auto;
+    overflow-x: scroll;
+}
+/*.galleryImage img{
+    display: flex;
+    width: 350px;
+    height: 213px;
+    border: 5px solid #ce1212;
+}*/
+.galleryImage::-webkit-scrollbar{
+    display: none;
+
+}
+.gallaryImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    height: 213px;
+    border: 5px solid #ce1212;
+    gap: 20px;
+    
+}

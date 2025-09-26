@@ -14,7 +14,7 @@ const [nav,setNav]= useState("");
                 <li onClick={()=>setNav("menu")} className={nav==="menu"?"active":""}>Menu</li>
                 <li onClick={()=>setNav("event")} className={nav==="event"?"active":""}>Event</li>
                 <li onClick={()=>setNav("chefs")} className={nav==="chefs"?"active":""}>Chefs</li>
-                <li onClick={()=>setNav("gallery")} className={nav==="gallery"?"active":""}>Gallery</li>
+                <a href="#gallery"><li onClick={()=>setNav("gallery")} className={nav==="gallery"?"active":""}>Gallery</li></a>
                 <li onClick={()=>setNav("contact")} className={nav==="contact"?"active":""}>Contact</li>
             </ul>
         <a href="#booknow"><button>Book a Table</button></a>
