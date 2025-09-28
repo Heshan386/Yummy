@@ -4,15 +4,19 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 550px;
+    height: auto;
     background: rgb(236, 233, 229);
-    margin-top: 50px;
+    margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .mainGallery span{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: -20px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40% ;
 }
 .galleryHeding{
     display: flex;
@@ -22,6 +26,9 @@
     font-family: "Schoolbell", cursive;
     font-size: 25px;
     gap: 20px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40% ;
 }
 .redGallery{
     color: #ce1212;
@@ -48,9 +55,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 350px;
-    height: 213px;
+    width: 270px;
+    height: 150px;
     border: 5px solid #ce1212;
     gap: 20px;
     
+}
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
 }

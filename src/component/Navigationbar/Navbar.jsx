@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Navbar.css'
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
 
@@ -14,10 +15,10 @@ const [nav,setNav]= useState("");
                 <li onClick={()=>setNav("menu")} className={nav==="menu"?"active":""}>Menu</li>
                 <li onClick={()=>setNav("event")} className={nav==="event"?"active":""}>Event</li>
                 <li onClick={()=>setNav("chefs")} className={nav==="chefs"?"active":""}>Chefs</li>
-                <a href="#gallery"><li onClick={()=>setNav("gallery")} className={nav==="gallery"?"active":""}>Gallery</li></a>
+               <Link to='gallery' smooth='true'><li onClick={()=>setNav("gallery")} className={nav==="gallery"?"active":""}>Gallery</li></Link> 
                 <li onClick={()=>setNav("contact")} className={nav==="contact"?"active":""}>Contact</li>
             </ul>
-        <a href="#booknow"><button>Book a Table</button></a>
+       <Link to='booknow' smooth='true'><button>Book a Table</button></Link> 
     </div>
   )
 }

@@ -3,7 +3,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 100px;
+    width: 100%;
+    height: 600px;
+    margin-top: 100px;
     
 }
 .bookNowMain span{
@@ -11,6 +13,9 @@
     align-items: center;
     justify-content: center;
     color:#7f7f90;
+    animation: appear ease-in;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 
 }
 .bookNowMain .heding{
@@ -19,7 +24,9 @@
     justify-content: center;
     flex-direction: row;
     gap: 20px;
-    padding-top: 20px;
+    animation: appear ease-in;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 .bookNowMain .heding h1{
     display: flex;
@@ -33,61 +40,63 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
     width: 80%;
     height: auto;
     background:rgb(236, 233, 229);
-    margin-top: 50px;
 }
 .bookNowMain .bookNowSection .booknowimg{
     display: flex;
-    width: 400px;
+    width: 30%;
     height: 500px;
+    animation: appear2 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
-.booknowimg .bookNowSection .bookNowFrom{
+.bookNowFrom{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    
-    
+    width: 800px;
 }
 .bookNowFrom .firstRow{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
-
 }
 .bookNowFrom .secondRow{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px
 }
 .bookNowFrom .fRowItem{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: 220px;
     height: 35px;
     margin: 20px;
     padding-left: 10px;
     border: 1px solid cadetblue;
     font-family:"Inter",  sans-serif;
+    animation: appear2 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 
 }
 .bookNowFrom textarea{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 20px;
     width: 96%;
     height: 150px;
     padding-left: 10px;
     border: 1px solid cadetblue;
     font-family:"Inter",  sans-serif;
-    
-
+    animation: appear2 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
 }
 .bookNowSection .bookNowFrom button{
     display: flex;
@@ -97,13 +106,37 @@
     width: 200px;
     height: 50px;
     margin-top: 30px;
-    margin-left: 41%;
     background: #ce1212;
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    animation: appear ease-in;
+    animation-timeline: view();
+    animation-range: entry 0% cover 15%;
 }
 .bookNowFrom button:hover{
     transition: 0.5s;
     background:color-mix(in srgb, #ce1212, transparent 25%);
+}
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0;
+    }
+    to{
+        opacity: 1;
+        opacity: 1;
+    }
+    
+}
+@keyframes appear2 {
+    from{
+        opacity: 0;
+        clip-path: inset(100% 0 0 0);
+    }
+    to{
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+    
 }
