@@ -1,122 +1,182 @@
-.mainHero{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 600px;
-    flex-direction: row;
-    background-color: rgb(236, 233, 229);
-}
-.heroText{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 300px;
-    
-}
-.heroText h1{
-    display: flex;
-    color:#37373f;
-    font-size: 50px;
-    font-family: "Schoolbell", cursive;
-    margin-bottom: -10px;
-    animation: appear 1s linear;
-}
-.heroText h4{
-    display: flex;
-    font-family:  "Inter",  sans-serif;
-    padding-top: 20px;
-    font-size: 20px;
-    color: #7f7f90;
-    animation: appear 1s linear;
-    
-}
-.heroButton{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: start;
-    padding-top: 10px;
-    animation: appear 1s linear;
-    
-}
-.heroButton button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 150px;
-    height: 50px;
-    margin-right: 300px;
-    border: none;
-    background: #ce1212;
-    border-radius: 30px;
-    color: white;
-    cursor: pointer;
-}
-.heroButton button:hover{
-    transition: 0.5s;
-    background:color-mix(in srgb, #ce1212, transparent 25%);
-}
-.watchVideo{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-left: -280px;
-    margin-top: -15px;
 
+.mainHero {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 600px;
+  flex-direction: row;
+  background-color: rgb(236, 233, 229);
+  z-index: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 30px;
+}
 
+.heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: clamp(20px, 5vw, 170px);
+  flex: 1;
 }
-.watchVideo img{
-    display: flex;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
+
+.heroText h1 {
+  color: #37373f;
+  font-size: clamp(28px, 5vw, 50px);
+  font-family: "Schoolbell", cursive;
+  margin-bottom: -10px;
+  line-height: 1.2;
 }
-.watchVideo h5{
-    display: flex;
-    font-size: 18px;
-    font-family: "Inter",  sans-serif;
-    cursor: pointer;
+
+.heroText h4 {
+  font-family: "Inter", sans-serif;
+  padding-top: 20px;
+  font-size: clamp(14px, 2.5vw, 20px);
+  color: #7f7f90;
 }
-.heroImg{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-right: 300px;
-    
+
+.heroButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding-top: 15px;
+  flex-wrap: wrap;
 }
-.heroImg img{
-    display: flex;
-    width: 400px;
-    height: 400px;
+
+.heroButton button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 50px;
+  border: none;
+  background: #ce1212;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
 }
+
+.heroButton button:hover {
+  transition: 0.5s;
+  background: color-mix(in srgb, #ce1212, transparent 25%);
+}
+
+.watchVideo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.watchVideo img {
+  width: 40px;
+  height: 40px;
+}
+
+.watchVideo h5 {
+  font-size: clamp(14px, 2.5vw, 18px);
+  font-family: "Inter", sans-serif;
+}
+
+.watchVideo h5:hover {
+  transition: 0.5s;
+  color: #ce1212;
+}
+
+.heroImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding-right: clamp(20px, 5vw, 170px);
+}
+
 .heroImg img {
-    animation: up-down 2s ease-in-out infinite alternate-reverse both;
-
-}
-.watchVideo h5:hover{
-    transition: 0.5s;
-    color: #ce1212;
+  width: clamp(200px, 40vw, 400px);
+  height: auto;
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
+/* Animations */
 @keyframes up-down {
   0% {
     transform: translateY(10px);
   }
-
   100% {
     transform: translateY(-10px);
   }
 }
+
 @keyframes appear {
-    from{
-        opacity: 0;
-        scale: 0;
-    }
-    to{
-        opacity: 1;
-        scale: 1;
-    }
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.heroText {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .mainHero {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .heroText {
+    padding-left: 0;
+    align-items: center;
+  }
+
+  .heroButton {
+    justify-content: center;
+  }
+
+  .heroImg {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainHero {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .heroText h1 {
+    font-size: 28px;
+  }
+
+  .heroText h4 {
+    font-size: 16px;
+  }
+
+  .heroImg img {
+    width: 80%;
+    max-width: 280px;
+  }
+
+  .heroButton {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .watchVideo {
+    justify-content: center;
+  }
 }

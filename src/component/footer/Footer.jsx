@@ -31,11 +31,11 @@ const Footer = () => {
                         <h4>Contact</h4>
                         <div className="phone">
                             <h5>Phone:</h5>
-                            <span> +1 5589 55488 55</span>
+                            <span className='footerSpan'> +1 5589 55488 55</span>
                         </div>
                         <div className="email">
                             <h5>Email:</h5>
-                            <span> info@example.com</span>
+                            <span className='footerSpan'> info@example.com</span>
                         </div>
                     </div>
                 </div>
@@ -47,11 +47,11 @@ const Footer = () => {
                         <h4>Opening Hours</h4>
                             <div className="phone">
                                 <h5>Mon-Sat:</h5>
-                                <span>9.00AM-10.00PM</span>
+                                <span className='footerSpan'>9.00AM-10.00PM</span>
                             </div>
                             <div className="email">
                                 <h5>Sunday:</h5>
-                                <span> Closed</span>
+                                <span className='footerSpan'> Closed</span>
                             </div>
                         
                     </div>

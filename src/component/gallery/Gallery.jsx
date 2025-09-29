@@ -22,7 +22,7 @@ const Gallery = () => {
           <div className='galleryImage'>
             <Swiper
             modules={[Autoplay]}
-            spaceBetween={10}
+            spaceBetween={5}
             slidesPerView={4}
             loop={true}
             autoplay={{delay:2000}}
@@ -30,42 +30,42 @@ const Gallery = () => {
             onSwiper={(swiper) => console.log(swiper)}
             >
             <SwiperSlide>
-              <div className="gallaryImg">
+              <div className="galleryImg">
                 <img src={gallery1} alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="gallaryImg">
+              <div className="galleryImg">
                 <img src={gallery2} alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="gallaryImg">
+              <div className="galleryImg">
                 <img src={gallery3} alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="gallaryImg">
+              <div className="galleryImg">
                 <img src={gallery4} alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="gallaryImg">
+              <div className="galleryImg">
                 <img src={gallery5} alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="gallaryImg">
+              <div className="galleryImg">
                 <img src={gallery6} alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="gallaryImg">
+              <div className="galleryImg">
                 <img src={gallery7} alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="gallaryImg">
+              <div className="galleryImg">
                 <img src={gallery8} alt="" />
               </div>
             </SwiperSlide>

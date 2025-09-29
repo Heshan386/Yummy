@@ -1,142 +1,219 @@
-.bookNowMain{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 600px;
-    margin-top: 100px;
-    
-}
-.bookNowMain span{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color:#7f7f90;
-    animation: appear ease-in;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
 
+.bookNowMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 600px;
+  margin-top: 100px;
+  padding: 20px;
+  box-sizing: border-box;
 }
-.bookNowMain .heding{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 20px;
-    animation: appear ease-in;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-}
-.bookNowMain .heding h1{
-    display: flex;
-    font-family: "Schoolbell", cursive;
-    font-size: 50px;
-}
-.bookNowMain .heding .h1Red{
-    color: #ce1212;
-}
-.bookNowMain .bookNowSection{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    height: auto;
-    background:rgb(236, 233, 229);
-}
-.bookNowMain .bookNowSection .booknowimg{
-    display: flex;
-    width: 30%;
-    height: 500px;
-    animation: appear2 linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-}
-.bookNowFrom{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 800px;
-}
-.bookNowFrom .firstRow{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.bookNowFrom .secondRow{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.bookNowFrom .fRowItem{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 220px;
-    height: 35px;
-    margin: 20px;
-    padding-left: 10px;
-    border: 1px solid cadetblue;
-    font-family:"Inter",  sans-serif;
-    animation: appear2 linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
 
+.bookNowMain span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7f7f90;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
-.bookNowFrom textarea{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 96%;
-    height: 150px;
-    padding-left: 10px;
-    border: 1px solid cadetblue;
-    font-family:"Inter",  sans-serif;
-    animation: appear2 linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30%;
+
+.bookNowMain .heding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
-.bookNowSection .bookNowFrom button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    width: 200px;
-    height: 50px;
-    margin-top: 30px;
-    background: #ce1212;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    animation: appear ease-in;
-    animation-timeline: view();
-    animation-range: entry 0% cover 15%;
+
+.bookNowMain .heding h1 {
+  font-family: "Schoolbell", cursive;
+  font-size: clamp(28px, 5vw, 50px);
+  line-height: 1.2;
 }
-.bookNowFrom button:hover{
-    transition: 0.5s;
-    background:color-mix(in srgb, #ce1212, transparent 25%);
+
+.bookNowMain .heding .h1Red {
+  color: #ce1212;
 }
+
+.bookNowSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 30px;
+  padding: 20px;
+  background: rgb(236, 233, 229);
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+.booknowimg {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  min-width: 250px;
+  height: auto;
+  max-height: 500px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.bookNowFrom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  max-width: 800px;
+  width: 100%;
+}
+
+.bookNowFrom .firstRow,
+.bookNowFrom .secondRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.bookNowFrom .fRowItem {
+  flex: 1;
+  min-width: 150px;
+  max-width: 220px;
+  height: 40px;
+  margin: 10px;
+  padding-left: 10px;
+  border: 1px solid cadetblue;
+  font-family: "Inter", sans-serif;
+  animation: appear2 linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  box-sizing: border-box;
+}
+
+.bookNowFrom textarea {
+  width: 96%;
+  min-height: 120px;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid cadetblue;
+  font-family: "Inter", sans-serif;
+  animation: appear2 linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.bookNowSection .bookNowFrom button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  background: #ce1212;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 10%;
+}
+
+.bookNowFrom button:hover {
+  transition: 0.5s;
+  background: color-mix(in srgb, #ce1212, transparent 25%);
+}
+
+/* Animations */
 @keyframes appear {
-    from{
-        opacity: 0;
-        scale: 0;
-    }
-    to{
-        opacity: 1;
-        opacity: 1;
-    }
-    
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }
+
 @keyframes appear2 {
-    from{
-        opacity: 0;
-        clip-path: inset(100% 0 0 0);
-    }
-    to{
-        opacity: 1;
-        clip-path: inset(0 0 0 0);
-    }
-    
+  from {
+    opacity: 0;
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
 }
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .bookNowSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+.booknowimg {
+    width: 60%;
+    max-height: 350px;
+  }
+
+  .bookNowFrom .firstRow,
+  .bookNowFrom .secondRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bookNowFrom .fRowItem {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .bookNowMain {
+    margin-top: 50px;
+  }
+
+  .bookNowMain .heding {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bookNowMain .heding h1 {
+    font-size: 28px;
+  }
+
+  .bookNowMain .bookNowSection .booknowimg {
+    width: 100%;
+    max-height: 250px;
+  }
+
+  .bookNowSection {
+    padding: 15px;
+  }
+
+  .bookNowSection .bookNowFrom button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+

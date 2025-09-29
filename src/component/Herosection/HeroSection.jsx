@@ -15,7 +15,7 @@ const HeroSection = () => {
         <div className="heroText">
             <h1>Enjoy Your Healthy</h1>
             <h1>Delicious Food</h1>
-            <h4>We are team of talented designers making websites with Bootstrap</h4>
+            <h4>Yummy Restaurant has been a local favorite for more than a decade, situated near the coastal lines of the western province of Sri Lanka. Yummy is known for its authentic Sri Lankan food, exotic Indian and Chinese cuisine and a blend of western and continental dishes.</h4>
             <div className="heroButton">
                 <Link to='booknow' smooth='true'><button>Book a Table</button></Link>
                 <div className="watchVideo">

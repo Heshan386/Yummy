@@ -1,24 +1,23 @@
-.mainGallery{
+
+.mainGallery {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: auto;
     background: rgb(236, 233, 229);
     margin-top: 100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 20px;
+    box-sizing: border-box;
 }
-.mainGallery span{
+
+.mainGallery span {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40% ;
 }
-.galleryHeding{
+
+.galleryHeding {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -26,32 +25,30 @@
     font-family: "Schoolbell", cursive;
     font-size: 25px;
     gap: 20px;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40% ;
+    text-align: center;
 }
-.redGallery{
+
+.redGallery {
     color: #ce1212;
 }
-.galleryImage{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    height: auto;
-    overflow-x: scroll;
-}
-/*.galleryImage img{
-    display: flex;
-    width: 350px;
-    height: 213px;
-    border: 5px solid #ce1212;
-}*/
-.galleryImage::-webkit-scrollbar{
-    display: none;
 
+.galleryImage {
+    display: flex;
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 30px;
+    overflow-x: auto; /* scrolls horizontally if images overflow */
+    padding: 10px 0;
 }
-.gallaryImg{
+
+.galleryImage::-webkit-scrollbar {
+    display: none;
+}
+
+.galleryImg {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,15 +56,46 @@
     height: 150px;
     border: 5px solid #ce1212;
     gap: 20px;
-    
+    border-radius: 10px;
+    background: white;
+    overflow: hidden;
 }
-@keyframes appear {
-    from{
-        opacity: 0;
-        scale: 0;
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .galleryImg {
+        width: 220px;
+        height: 130px;
     }
-    to{
-        opacity: 1;
-        scale: 1;
+}
+
+@media (max-width: 768px) {
+    .galleryHeding {
+        font-size: 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .galleryImage {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: scroll;
+    }
+
+    .galleryImg {
+        flex: 0 0 auto; /* prevents shrinking in horizontal scroll */
+        width: 200px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .galleryHeding {
+        font-size: 18px;
+    }
+
+    .galleryImg {
+        width: 160px;
+        height: 100px;
     }
 }
